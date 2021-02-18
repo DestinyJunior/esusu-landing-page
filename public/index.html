@@ -18,24 +18,109 @@
     .bg-contact {
       background: #727aef;
     }
+
+    .border-bottom-white {
+      border-bottom: 2px solid #ebeaed;
+    }
+    .bg-contact-light {
+      background: url("../public/assets/svg/Placeholder.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .btn-contact {
+      background-color: #727aef;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(21, 20, 57, 0.4);
+      opacity: 1;
+    }
+
+    label {
+      color: #1e0e62;
+    }
   </style>
   <body>
-    <div class="w-full px-36 bg-contact">
-      <div class="w-4/5 mx-auto flex flex-row">
-        <div class="">
-          <h3>Get in Touch</h3>
-          <p class="text-sm">
-            We appreciate each customer and we are proud that 60% of clients
-            come back to work with us again.
-          </p>
+    <div class="w-full px-36 bg-contact py-20">
+      <div
+        class="w-4/5 mx-auto grid grid-cols-2 gap-10 items-start justify-between"
+      >
+        <div class="flex flex-col items-start justify-between space-y-5 pr-20">
+          <div class="border-bottom-white pb-6">
+            <h3 class="text-4xl font-bold">Get in Touch</h3>
+            <p class="text-sm text-white">
+              We appreciate each customer and we are proud that 60% of clients
+              come back to work with us again.
+            </p>
+            <div class="flex flex-row items-center space-x-2">
+              <span
+                ><img src="../public/assets/svg/fa-phone.svg" alt="phone"
+              /></span>
+              <span>+1 555 505 5050</span>
+            </div>
+            <div class="flex flex-row items-center space-x-2">
+              <span
+                ><img src="../public/assets/svg/fa-envelope.svg" alt="envelope"
+              /></span>
+              <span>info@esusu.com</span>
+            </div>
+          </div>
+          <div>
+            <h3>Find Us on Map</h3>
+            <p class="text-sm text-white">Via Salaria, 243, 00199 Rome</p>
+            <img src="../public/assets/png/Map.png" alt="" />
+          </div>
         </div>
-        <div class="">
-          <h3>You Can Mail Us</h3>
-          <p class="text-sm">We are always looking for a next great project.</p>
+        <div class="flex-shrink-0">
+          <div>
+            <h3 class="text-4xl font-bold">You Can Mail Us</h3>
+            <p class="text-sm text-white">
+              We are always looking for a next great project.
+            </p>
+          </div>
+          <div class="bg-contact-light p-10 rounded-r-lg">
+            <form action="" class="space-y-2">
+              <div class="flex flex-col">
+                <label for="">E-MAIL</label>
+                <input
+                  type="text"
+                  class="bg-white px-2 py-2 rounded-md"
+                  placeholder="Your email"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label for="">MESSAGE</label>
+                <textarea
+                  cols="10"
+                  rows="10"
+                  class="w-full rounded-md px-2 py-2"
+                  placeholder="Drop us a line"
+                ></textarea>
+              </div>
+              <div class="flex flex-col">
+                <label for="">NAME</label>
+                <div class="flex flex-row items-start justify-between">
+                  <input
+                    type="text"
+                    class="flex-grow bg-white px-2 py-2 rounded-md"
+                    placeholder="Your name"
+                  />
+                  <button
+                    type="submit"
+                    class="flex-shrink-0 btn-contact py-2 px-2 rounded-md text-white"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="w-full px-32">
+    <div class="w-full px-32 py-16">
       <div
         class="w-4/5 mx-auto px-12 grid grid-cols-2 gap-0 items-start justify-between"
       >
@@ -44,7 +129,7 @@
             Hey! Follow us on social media so you don’t miss any offer.
           </p>
         </div>
-        <div class="saly">
+        <div class="flex-shrink-0">
           <img
             src="../public/assets/png/Saly-6.png"
             class="w-full h-full"
@@ -55,7 +140,7 @@
     </div>
     <footer class="w-full bg-black py-10 px-10">
       <div class="w-full flex items-center justify-center">
-        <p class="text-white">© 2021 esusu. All rights reserved.</p>
+        <p class="text-white">&copy; 2021 esusu. All rights reserved.</p>
       </div>
     </footer>
   </body>
