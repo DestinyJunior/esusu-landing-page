@@ -22,11 +22,13 @@
     .border-bottom-white {
       border-bottom: 2px solid #ebeaed;
     }
+
     .bg-contact-light {
       background: url("./assets/svg/Placeholder.svg");
       background-repeat: no-repeat;
       background-size: 100%;
     }
+    
 
     .btn-contact {
       background-color: #636CE4;
@@ -66,6 +68,7 @@
       background-position: top 0% left 9%, bottom 0% right 7%;
       background-size: 4.5rem, 7.5rem;
     }
+
     .header {
       background-image: url("./assets/svg/esm-lft.svg"),
         url("./assets/svg/ebg-rt.svg");
@@ -88,25 +91,44 @@
       width: 10rem;
     } */
 
+  @media (max-width: 640px) {
+    .bg-contact-light {
+      background: url("./assets/svg/Placeholder.svg");
+      background-repeat: no-repeat;
+      /* background-size: contain; */
+      /* background: none; */
+    }
+
+    .header {
+      background-image: url("./assets/svg/esm-lft.svg"),
+        url("./assets/svg/ebg-rt.svg");
+      background-repeat: no-repeat;
+      background-position: top 0% left 0%, top 0% right 0%;
+      background-size: 3rem, 9rem;
+    }
+  }
+    
+
+    
     
   </style>
   <body>
     <div class="header w-full">
-      <nav class="w-1/2 flex items-center space-x-5 ml-28 px-14 py-4">
+      <nav class="w-full sm:w-1/2 flex items-center space-x-5 px-6 pt-8 sm:pt-0 sm:ml-28 sm:px-14  sm:py-4">
         <span class="flex items-center space-x-1">
           <img src="./assets/svg/logonav.svg" alt="logo">
           <span class="text-2xl font-bold">Esusu</span>
         </span>
-        <ul class="flex items-center space-x-3">
+        <ul class="hidden sm:flex items-center space-x-3">
           <li class="active">Home</li>
           <li>How it works</li>
           <li>Faq</li>
           <li>Contact</li>
         </ul>
       </nav>
-        <div class="pl-36 pr-10 content w-full flex">
-            <div class="w-1/2 space-y-8 pt-24">
-              <h3 class="text-6xl">Esusu <br> App</h3>
+        <div class="px-6 sm:pl-36 sm:pr-10 content w-full flex flex-col-reverse sm:flex-row">
+            <div class="w-full sm:w-1/2 space-y-8 pt-24">
+              <h3 class="text-4xl sm:text-6xl">Esusu <br> App</h3>
               <p class="esusu-gray-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem neque, 
                 consectetur ut felis non, iaculis sagittis nulla. Ut mattis, sem vel sagittis Ut mattis, 
                 sem vel sagittis Ut mattis, sem vel sagittis </p>
@@ -119,22 +141,29 @@
                   />
               </div>
             </div>
-            <div class="w-auto">
-              <img src="./assets/png/3dphone.png" class="-mt-20" alt="3dphone">
-
-            </div>
+            <!-- <div class="w-auto">
+              <img src="./assets/png/3dphone.png" class="sm:-mt-20" alt="3dphone">
+            </div> -->
         </div>
     </div>
-    <div class="w-full px-36 pb-18 pt-5">
-      <div class="w-full h-full my-8">
+    <div class="w-full px-8 sm:px-36 pb-18 pt-5">
+      <div class="w-full h-full my-8 flex flex-col space-y-8 sm:space-y-0 sm:block">
         <h3 class="text-center opacity-80 text-4xl font-semibold">
           How the app works
         </h3>
+         <div class="w-full h-full bg-eclipse sm:hidden">
+          <img
+            src="./assets/png/mockup.png"
+            class="w-64 mx-auto"
+            alt="HowitWorks"
+            srcset=""
+          />
+        </div>
       </div>
       <div
-        class="w-4/5 mx-auto flex flex-row items-start justify-between space-x-10"
+        class="w-full sm:w-4/5 mx-auto flex flex-row items-start justify-between space-x-4 sm:space-x-10"
       >
-        <div class="w-2/5 h-full bg-eclipse">
+        <div class="hidden sm:block sm:w-2/5 h-full bg-eclipse">
           <img
             src="./assets/png/mockup.png"
             class="w-64 mx-auto"
@@ -143,13 +172,13 @@
           />
         </div>
         <div
-          class="w-3/5 h-full pt-16 flex flex-col items-start justify-end space-y-16"
+          class="w-full sm:w-3/5 h-full sm:pt-16 flex flex-col items-start justify-end space-y-5 sm:space-y-16"
         >
-          <div class="space-y-14">
+          <div class="space-y-7 sm:space-y-14">
             <h6 class="esusu-blue-200 text-lg font-bold">
               Esusu app works with your andriod
             </h6>
-            <h3 class="text-6xl font-bold">Discover original products</h3>
+            <h3 class="text-3xl sm:text-6xl font-bold">Discover original products</h3>
             <p class="esusu-gray-dark">
               There are more than 950 categories updated daily based on trending
               websites reviews an users rating.
@@ -161,16 +190,16 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-20 py-18 bg-contact">
-      <div class="w-4/5 mx-auto flex flex-row items-start justify-between">
+    <div class="w-full px-8 sm:px-20 py-18 bg-contact">
+      <div class="w-full sm:w-4/5 mx-auto flex flex-col-reverse sm:flex-row items-start justify-between">
         <div
-          class="text-white w-2/4 h-full pr-18 flex flex-col items-start space-y-12"
+          class="w-full text-white sm:w-2/4 h-full pr-18 flex flex-col items-start space-y-6 sm:space-y-12"
         >
-          <div>
-            <h6 class="font-bold">Esusu</h6>
+          <div class="mt-5 sm:mt-0">
+            <h6 class="text-2xl font-bold">Esusu</h6>
           </div>
           <div class="space-y-12">
-            <h3 class="text-6xl">
+            <h3 class="text-3xl sm:text-6xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             </h3>
             <p>
@@ -178,27 +207,27 @@
               ut dolor eu urna eleifend
             </p>
           </div>
-          <div class="-ml-3 flex flex-row items-center">
+          <div class="w-full -ml-3 flex flex-col sm:flex-row items-center">
             <img src="./assets/svg/gplay.svg" class="w-52" alt="Google Pay" />
             <img
               src="./assets/svg/aplay.svg"
-              class="w-52 -mb-3"
+              class="w-52 sm:-mb-3"
               alt="Apple Pay"
             />
           </div>
         </div>
-        <div class="w-2/4">
+        <div class="w-full sm:w-2/4">
           <img src="./assets/png/about.png" alt="About" />
         </div>
       </div>
     </div>
-    <div class="w-full px-36 pt-12 pb-32">
-      <div class="w-4/5 mx-auto flex flex-row">
+    <div class="w-full px-8 sm:px-36 pt-12 pb-32">
+      <div class="w-full sm:w-4/5 sm:mx-auto flex flex-col-reverse sm:flex-row">
         <div
-          class="w-7/12 h-full flex flex-col items-start justify-between space-y-11 pt-40"
+          class="w-full sm:w-7/12 h-full flex flex-col items-start justify-between sm:space-y-11 pt-4 sm:pt-40"
         >
           <div>
-            <h2 class="text-5xl font-bold">With draw to your bank Directly</h2>
+            <h2 class="text-3xl sm:text-5xl font-bold">With draw to your bank Directly</h2>
           </div>
           <div>
             <p>
@@ -206,7 +235,7 @@
               ut dolor eu urna eleifend ullamcorper vel aliquam justo.
             </p>
           </div>
-          <div class="">
+          <div class="mt-2">
             <img
               src="./assets/svg/aplay.svg"
               class="w-52 -ml-3"
@@ -214,22 +243,22 @@
             />
           </div>
         </div>
-        <div class="w-5/12 h-full flex-shrink-0">
+        <div class="w-full sm:w-5/12 h-full sm:flex-shrink-0">
           <img src="./assets/png/withdraw.png" alt="withdraw" />
         </div>
       </div>
     </div>
-    <div class="w-full px-36 pt-12 pb-18">
+    <div class="w-full px-8 sm:px-36 pt-12 pb-18">
       <div
-        class="w-4/5 pl-12 pt-10 mx-auto rounded-2xl bg-contact flex flex-row"
+        class="w-full sm:w-4/5 sm:pl-12 pt-10 mx-auto rounded-2xl bg-contact flex flex-col-reverse sm:flex-row"
       >
         <div
-          class="flex-shrink-0 w-6/12 pl-10 pb-10 pt-10 h-full flex flex-col items-start space-y-7"
+          class="flex-shrink-0 w-10/12 sm:w-6/12 pl-10 pb-10 pt-10 h-full flex flex-col items-start space-y-7"
         >
           <h2 class="text-white text-4xl">
             Eusus app is the best app for all your savings
           </h2>
-          <div class="-ml-3 flex flex-row items-center">
+          <div class="-ml-3 flex flex-col sm:flex-row items-center">
             <img src="./assets/svg/gplay.svg" class="w-52" alt="Google Pay" />
             <img
               src="./assets/svg/aplay.svg"
@@ -238,7 +267,7 @@
             />
           </div>
         </div>
-        <div class="w-full h-full -ml-24">
+        <div class="order-1 w-full h-full -ml-24">
           <img
             src="./assets/png/Frame.png"
             class="ml-24 -mt-40 w-96"
@@ -247,12 +276,12 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-20 bg-contact py-20">
+    <div class="w-full px-6 sm:px-20 bg-contact py-20">
       <div
-        class="w-4/5 mx-auto grid grid-cols-2 gap-10 items-start justify-between"
+        class="w-full sm:w-4/5 sm:mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-start justify-between"
       >
         <div
-          class="h-full flex flex-col items-start justify-between space-y-5 pr-20"
+          class="h-full flex flex-col items-start justify-between space-y-5 sm:pr-20"
         >
           <div class="border-bottom-white pb-10 space-y-8">
             <h3 class="text-4xl font-bold">Get in Touch</h3>
@@ -289,7 +318,7 @@
             </p>
           </div>
           <div class="bg-contact-light p-10 rounded-lg">
-            <form action="" class="space-y-3">
+            <form action="" class="space-y-3 w-full h-full">
               <div class="flex flex-col space-y-2">
                 <label for="" class="text-sm font-bold uppercase">e-mail</label>
                 <input
@@ -311,7 +340,7 @@
               <div class="flex flex-col space-y-2">
                 <label for="" class="text-sm font-bold uppercase">name</label>
                 <div
-                  class="flex flex-row items-start justify-between space-x-1"
+                  class="flex flex-col sm:flex-row items-start justify-between space-y-3 sm:space-x-2 sm:space-y-0"
                 >
                   <input
                     type="text"
@@ -331,17 +360,17 @@
         </div>
       </div>
     </div>
-    <div class="w-full px-32 py-16">
+    <div class="w-full px-2 py-8 sm:px-32 sm:py-16">
       <div
-        class="w-4/5 mx-auto px-12 grid grid-cols-2 gap-0 items-start justify-between"
+        class="w-full sm:w-4/5 mx-auto px-12 grid grid-cols-1 sm:grid-cols-2 gap-0 items-start justify-between"
       >
-        <div class="pt-20">
-          <p class="text-4xl">
+        <div class="pt-10 sm:pt-20">
+          <p class="text-2xl sm:text-4xl">
             Hey! Follow us on social media so you don’t miss any offer.
           </p>
         </div>
         <div class="flex-shrink-0">
-          <img src="./assets/png/Saly-6.png" class="w-full h-full" alt="" />
+          <img src="./assets/png/Saly-6.png" class="w-full h-full" alt="socialmedia" />
         </div>
       </div>
     </div>
