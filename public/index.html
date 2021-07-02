@@ -9,8 +9,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-  </head>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="https://unpkg.com/scrollreveal">
+      ScrollReveal().reveal('.mockup');
+    </script> -->
+   
   <style>
+    /* All delay classes will take half the time to start */
+    /* :root {
+      --animate-delay: 0.1s; 
+    } */
+
     html {
       scroll-behavior: smooth;
     }
@@ -107,8 +117,8 @@
       background-size: 3rem, 9rem;
     }
   }
-    
 
+ 
     
     
   </style>
@@ -122,7 +132,7 @@
         <ul class="hidden sm:flex items-center space-x-3">
           <li class="active">Home</li>
           <li>How it works</li>
-          <li>Faq</li>
+          <li>Faqs</li>
           <li>Contact</li>
         </ul>
       </nav>
@@ -142,7 +152,7 @@
               </div>
             </div>
             <div class="hidden sm:block w-auto">
-              <img src="./assets/png/3dphone.png" class="sm:-mt-20" alt="3dphone">
+              <img src="./assets/png/3dphone.png" data-aos="fade-left" class="sm:-mt-20  animate__animated animate__fadeInRight" alt="3dphone">
             </div>
         </div>
     </div>
@@ -154,9 +164,8 @@
          <div class="w-full h-full bg-eclipse sm:hidden">
           <img
             src="./assets/png/mockup.png"
-            class="w-64 mx-auto"
+            class="w-64 mx-auto mockup"
             alt="HowitWorks"
-            srcset=""
           />
         </div>
       </div>
@@ -166,9 +175,8 @@
         <div class="hidden sm:block sm:w-2/5 h-full bg-eclipse">
           <img
             src="./assets/png/mockup.png"
-            class="w-64 mx-auto"
+            class="w-64 mx-auto mockup"
             alt="HowitWorks"
-            srcset=""
           />
         </div>
         <div
