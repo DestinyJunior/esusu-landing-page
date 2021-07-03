@@ -118,13 +118,59 @@
     }
   }
 
- 
-    
+  #mobilemenu{
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -o-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
+    transition: display 2s;
+  }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
     
   </style>
   <body>
+    <div id="mobilemenu" class="hidden fixed w-screen h-screen bg-white block flex items-center overflow-none sm:hidden">
+      <button type="button" onclick="toggleMenu()" class="absolute top-10 right-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      </button>
+        <div class="1/2 mx-auto -mt-60">
+          <ul>
+          <li class="active text-lg">Home</li>
+          <li class="text-lg">How it works</li>
+          <li class="text-lg">Faqs</li>
+          <li class="text-lg">Contact</li>
+          </ul>
+        </div>
+    </div>
     <div class="header w-full">
-      <nav class="w-full sm:w-1/2 flex items-center space-x-5 px-6 py-8 sm:ml-28 sm:px-14  sm:py-5">
+      <nav class="w-full sm:w-1/2 flex items-center justify-between sm:justify-start sm:space-x-5 px-6 py-8 sm:ml-28 sm:px-14  sm:py-5">
         <span class="flex items-center space-x-1">
           <img src="./assets/svg/logonav.svg" alt="logo">
           <span class="text-2xl font-bold">Esusu</span>
@@ -135,6 +181,11 @@
           <li>Faqs</li>
           <li>Contact</li>
         </ul>
+        <button type="button" class="block sm:hidden" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+        </button>
       </nav>
         <div class="px-6 sm:pl-36 sm:pr-10 content w-full flex flex-col-reverse sm:flex-row">
             <div class="w-full sm:w-1/2 space-y-8 pt-24">
@@ -156,7 +207,7 @@
             </div>
         </div>
     </div>
-    <div class="w-full px-8 sm:px-36 pb-18 pt-5">
+    <div class="w-full px-8 sm:px-36 pb-18 pt-6">
       <div class="w-full h-full my-8 flex flex-col space-y-8 sm:space-y-0 sm:block">
         <h3 class="text-center opacity-80 text-4xl font-semibold">
           How the app works
@@ -387,5 +438,13 @@
         <p class="text-white">&copy; 2021 esusu. All rights reserved.</p>
       </div>
     </footer>
+
+
+    <script>
+          function toggleMenu() {
+            document.getElementById('mobilemenu').classList.toggle('hidden');
+            document.body.classList.toggle('fixed');
+          }
+    </script>
   </body>
 </html>
